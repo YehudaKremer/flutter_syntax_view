@@ -6,7 +6,7 @@ import 'index.dart';
 class DartSyntaxHighlighter extends SyntaxBase {
   DartSyntaxHighlighter([this.syntaxTheme]) {
     _spans = <HighlightSpan>[];
-    syntaxTheme ??= SyntaxTheme.dracula();
+    syntaxTheme ??= SyntaxTheme.vscodeLight();
   }
 
   @override

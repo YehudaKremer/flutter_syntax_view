@@ -55,20 +55,6 @@ SyntaxBase getSyntax(Syntax syntax, SyntaxTheme? theme) {
   switch (syntax) {
     case Syntax.DART:
       return DartSyntaxHighlighter(theme);
-    case Syntax.C:
-      return CSyntaxHighlighter(theme);
-    case Syntax.CPP:
-      return CPPSyntaxHighlighter(theme);
-    case Syntax.JAVA:
-      return JavaSyntaxHighlighter(theme);
-    case Syntax.KOTLIN:
-      return KotlinSyntaxHighlighter(theme);
-    case Syntax.SWIFT:
-      return SwiftSyntaxHighlighter(theme);
-    case Syntax.JAVASCRIPT:
-      return JavaScriptSyntaxHighlighter(theme);
-    case Syntax.YAML:
-      return YamlSyntaxHighlighter(theme);
     default:
       return DartSyntaxHighlighter(theme);
   }
