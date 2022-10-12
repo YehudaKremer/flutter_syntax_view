@@ -5,16 +5,12 @@ import 'syntax/index.dart';
 class SyntaxView extends StatefulWidget {
   SyntaxView({
     required this.code,
-    required this.syntax,
     this.syntaxTheme,
     this.fontSize = 14.0,
   });
 
   /// Code text
   final String code;
-
-  /// Syntax/Langauge (Dart, C, C++...)
-  final Syntax syntax;
 
   /// Theme of syntax view example SyntaxTheme.dracula() (default: SyntaxTheme.dracula())
   final SyntaxTheme? syntaxTheme;
@@ -32,9 +28,7 @@ class SyntaxViewState extends State<SyntaxView> {
     return SelectableText.rich(
       TextSpan(
         style: TextStyle(fontFamily: 'monospace', fontSize: widget.fontSize),
-        children: <TextSpan>[
-          getSyntax(widget.syntax, widget.syntaxTheme).format(widget.code)
-        ],
+        children: <TextSpan>[getSyntax(widget.syntaxTheme).format(widget.code)],
       ),
     );
   }

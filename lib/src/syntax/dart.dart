@@ -10,9 +10,6 @@ class DartSyntaxHighlighter extends SyntaxBase {
   }
 
   @override
-  Syntax get type => Syntax.DART;
-
-  @override
   SyntaxTheme? syntaxTheme;
 
   static const List<String> _keywords = const <String>[

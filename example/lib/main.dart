@@ -53,27 +53,9 @@ void main() {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Flutter Syntax View Example"),
-        backgroundColor: Colors.blueGrey[800],
-        elevation: 6,
-      ),
-      body: Column(
-        children: [
-          SyntaxView(
-            code: code,
-            syntax: Syntax.DART,
-            syntaxTheme: SyntaxTheme.vscodeDark(),
-          ),
-          // SyntaxView(
-          //     code: code,
-          //     syntax: Syntax.DART,
-          //     syntaxTheme: SyntaxTheme.vscodeLight(),
-          //     fontSize: 12.0,
-          //     withZoom: true,
-          //     withLinesCount: true,
-          //     expanded: true),
-        ],
+      body: SyntaxView(
+        code: code,
+        syntaxTheme: SyntaxTheme.vscodeDark(),
       ),
     );
   }

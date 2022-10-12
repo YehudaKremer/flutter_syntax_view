@@ -4,11 +4,7 @@ import 'index.dart';
 abstract class SyntaxBase {
   SyntaxTheme? get syntaxTheme;
   TextSpan format(String src);
-  Syntax get type;
 }
-
-/// Supported Syntaxes Enum
-enum Syntax { DART, C, CPP, JAVASCRIPT, KOTLIN, JAVA, SWIFT, YAML }
 
 /// Tokens
 enum HighlightType {
@@ -51,11 +47,6 @@ class HighlightSpan {
   }
 }
 
-SyntaxBase getSyntax(Syntax syntax, SyntaxTheme? theme) {
-  switch (syntax) {
-    case Syntax.DART:
-      return DartSyntaxHighlighter(theme);
-    default:
-      return DartSyntaxHighlighter(theme);
-  }
+SyntaxBase getSyntax(SyntaxTheme? theme) {
+  return DartSyntaxHighlighter(theme);
 }
